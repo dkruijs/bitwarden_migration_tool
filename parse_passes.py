@@ -64,6 +64,7 @@ def parse_accounts(text) -> dict:
     for account in accounts:
         account = account.split('\n')
         # Key is Account name, value is a dict {user: pass}.
+        print(account)
         if len(account) > 2:
             for set_ in account[2:]:
                 # Get the first value as account name, then split all following sets into key:value pairs
@@ -111,5 +112,5 @@ def parse(input_file) -> dict:
 
 # Test
 if __name__ == '__main__':
-    accounts = parse('test.txt')
+    accounts = parse('D:\\passes 04-11-2021.txt')
     prettyprinter.pprint(accounts, indent=4)
