@@ -1,0 +1,88 @@
+
+account 1
+---
+user:   daan   
+pass:   69f0-asfdjfgal
+
+
+account 2
+---
+user:   Daan
+pass:   98toiqwAVisdom
+
+
+account 3
+---
+user:   twinkiedefense
+pass:     asklfngalksndg
+
+
+------------
+--- ANWB ---
+------------
+
+account 1
+---
+user:   daan   
+pass:   69f0-asfdjasfgal
+
+
+account 2
+---
+user:   Daan
+pass:   98toiqwAViasdsdom
+
+
+account 3
+---
+user:   twinkiedefense
+pass:     asklfngaaslksndg
+
+
+------------
+--- HSO  ---
+------------
+
+account 1
+---
+user:   daan   
+pass:   69f0-asfdjfgal
+Key: value
+
+
+account 2
+---
+user:   Daan
+pass:   98toiqwAVisdom
+
+
+account 3
+---
+user:   twinkiedefense
+pass:     asklfngalksndg
+
+
+----------------
+--- Personal ---
+----------------
+
+
+account 1
+---
+user:   daan   
+pass:   69f0-asfdasaffjfgal
+
+
+account 2
+---
+user:   Daan
+pass:   98toiqwAVisdom
+PIN:    12875
+OTHERPIN: 9520
+
+
+account 3
+---
+user:   twinkiedefense
+pass:     aalfiefwnefl
+ID:     dkeifjg923405-

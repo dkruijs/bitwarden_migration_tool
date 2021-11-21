@@ -1,0 +1,5 @@
+# BitWarden executable used for testing
+bw.exe
+
+# Virtual environment
+venv
