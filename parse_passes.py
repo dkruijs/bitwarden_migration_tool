@@ -1,4 +1,3 @@
-import json 
 import prettyprinter
 
 
@@ -111,5 +110,5 @@ def parse(input_file) -> dict:
 
 # Test
 if __name__ == '__main__':
-    accounts = parse('test.txt')
+    accounts = parse('/media/daan/cryptcontainer/passes 10-12-2021.txt')
     prettyprinter.pprint(accounts, indent=4)
