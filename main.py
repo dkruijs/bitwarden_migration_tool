@@ -1,5 +1,5 @@
 import subprocess
-
+from parse_passes import parse
 
 
 def bw_login(): 
@@ -21,5 +21,7 @@ def bw_create_item():
 if __name__ == '__main__':
     # if 'BW_SESSION' not in os.environ:
     #     bw_login()
+    accounts_dump = parse('/media/daan/cryptcontainer/passes 10-12-2021.txt')
+    
 
 

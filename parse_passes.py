@@ -62,17 +62,26 @@ def parse_accounts(text) -> dict:
     results = {}
     for account in accounts:
         account = account.split('\n')
+        # print(account)
+        # print(['Account name:', account[0].strip()])
+        # Exception for more complicated accounts; pass as text blob
+        if account[0].strip() in ['One.com (jan)', 'Synology DS220+ NAS admin account']:
+            results[account[0]] = { 'Notes': '\n'.join(account[2:]) }
+            continue
         # Key is Account name, value is a dict {user: pass}.
-        print(account)
         if len(account) > 2:
             for set_ in account[2:]:
                 # Get the first value as account name, then split all following sets into key:value pairs
-                if account[0] in results:
+                # TODO: passwords with colons in them are clipped
+                if account[0].strip() in results:
                     # Add entry to value dict
-                    results[account[0]][set_.split(':')[0].strip()] = set_.split(':')[1].strip()
+                    results[account[0].strip()][set_.split(':', 1)[0].strip()] = set_.split(':', 1)[1].strip()
                 else:
                     # Create first dict as value
-                    results[account[0]] = { set_.split(':')[0].strip(): set_.split(':')[1].strip() }
+                    results[account[0].strip()] = { set_.split(':', 1)[0].strip(): set_.split(':', 1)[1].strip() }
+        else:
+            print("found short account (skipping):")
+            print(account)
     # prettyprinter.pprint(results, indent=4)
     return results
 
@@ -109,7 +118,7 @@ def parse(input_file) -> dict:
     return results 
 
 
-# Test
 if __name__ == '__main__':
     accounts = parse('/media/daan/cryptcontainer/passes 10-12-2021.txt')
     prettyprinter.pprint(accounts, indent=4)
+
